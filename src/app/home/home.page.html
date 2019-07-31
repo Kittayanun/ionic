@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      รายชื่อผู้สูงอายุ
+    </ion-title>
+    <button ion-button class="topright" (click)="gps()">GPS</button>
+
+    <style>
+    .topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    padding: 7px 7px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+    
+    .topleft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+    }
+    </style>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+    
+    <ion-item *ngFor="let contact  of contacts" >
+      <button ion-button (click)="showDetail(contact)"> {{ contact.name }}</button> 
+    </ion-item>
+  </ion-list>
+</ion-content>
