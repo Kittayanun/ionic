@@ -4,6 +4,7 @@
       รายชื่อผู้สูงอายุ
     </ion-title>
     <button ion-button class="topright" (click)="gps()">GPS</button>
+    <button ion-button class="center" (click)="addMarker()">Map</button>
 
     <style>
     .topright {
@@ -38,4 +39,7 @@
       <button ion-button (click)="showDetail(contact)"> {{ contact.name }}</button> 
     </ion-item>
   </ion-list>
+
+  <div id="map" style="width:100% ; height:100% ; background-color: burlywood"></div>
+
 </ion-content>
